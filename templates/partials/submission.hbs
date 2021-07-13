@@ -1,0 +1,198 @@
+{{!-- page 3 --}}
+
+    <div class="tab-pane fade" id="nav-mag-submit" role="tabpanel" aria-labelledby="nav-magsubmit-tab">
+    <div>
+            <div class="mag-heading"><b>ARTICLE SUBMISSION</b></div>
+            <div class="container">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="justify-content: center;">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active  text-dark m-2" id="pills-form-tab" data-bs-toggle="pill" data-bs-target="#pills-form" type="button" role="tab" aria-controls="pills-form" aria-selected="true">Form</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link  text-dark m-2" id="pills-guidelines-tab" data-bs-toggle="pill" data-bs-target="#pills-guidelines" type="button" role="tab" aria-controls="pills-guidelines" aria-selected="false">Authors guidelines</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link  text-dark m-2" id="pills-inst-tab" data-bs-toggle="pill" data-bs-target="#pills-inst" type="button" role="tab" aria-controls="pills-inst" aria-selected="false">Instruction</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link  text-dark m-2" id="pills-charge-tab" data-bs-toggle="pill" data-bs-target="#pills-charge" type="button" role="tab" aria-controls="pills-charge" aria-selected="false">How we Charge</button>
+                    </li>
+                </ul>
+                <div class="form-check mb-4 py-2 ps-5 col-lg-3 pe-2 formcheckbox">
+                    <input class="form-check-input " type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Agree to Authors guidelines
+                    </label>
+                </div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-form" role="tabpanel" aria-labelledby="pills-form-tab">
+                        <div class="container">
+                          <div class="h3 text-center m-2">Submit Your Article Here</div>
+                            <form class="needs-validation" enctype="multipart/form-data" method="POST" action="/user/article-submit" novalidate>
+                                <div class=" m-auto col-lg-7 bg-secondary text-dark card p-3">
+                                    <div class="form-floating mb-3">
+                                        <input type="word" class="form-control " id="floatingInput" required placeholder="First Name">
+                                        <label for="floatingInput">First Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="word" class="form-control " id="floatingInput" required placeholder="Last Name">
+                                        <label for="floatingInput">Last Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control " id="floatingInput" required placeholder="Mobile No">
+                                        <label for="floatingInput">Mobile Number</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control " id="floatingInput" required placeholder="name@example.com">
+                                        <label for="floatingInput">Email address</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="word" class="form-control " id="floatingInput" required placeholder="City">
+                                        <label for="floatingInput">City</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="word" class="form-control " id="floatingInput" required placeholder="Country">
+                                        <label for="floatingInput">Country</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="word" class="form-control " id="floatingInput" required placeholder="Institute">
+                                        <label for="floatingInput">Institute</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="word" class="form-control " id="floatingInput" required placeholder="Department">
+                                        <label for="floatingInput">Department</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" id="floatingSelect" required aria-label="Floating label select example">
+                                        <option selected>choose one</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                        <option value="4">Four</option>
+                                    </select>
+                                        <label for="floatingSelect">Profession</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="word" class="form-control " id="floatingInput" required placeholder="Title of Article">
+                                        <label for="floatingInput">Title</label>
+                                    </div>
+
+                                    <div class="drag bg-white mb-3">
+                                        <!-- <div class="drag-input"> -->
+                                        <input class="form-control  drag-input" name="article_file" type="file" id="entry_value" required onchange="getFileName()">
+                                        <!-- </div> -->
+                                        <div class="pt-4 d-flex justify-content-center align-items-center">
+                                            <div class="justify-content-center">
+                                                <img src="icons/upload.svg" alt=".." height="120">
+                                            </div>
+                                            <div class="mx-2 justify-content-center">Drag and Drop Here Or</div>
+                                            <div class="justify-content-center">
+                                                <button class="btn btn-outline-secondary m-2">Browse</button>
+                                            </div>
+                                        </div>
+                                        <span id="fileName" class="p-2 "></span>
+                                    </div>
+
+                                </div>
+                                <div class="text-center">
+                                    <input type="submit" class="btn btn-secondary m-2" value="Pay subscription fee">
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="pills-guidelines" role="tabpanel" aria-labelledby="pills-guidelines-tab">
+                        <div class="container">
+                            <div class="m-auto col-lg-7 bg-secondary text-dark card px-5">
+                              <span class="pt-3" style="font-size: 20px;" >Rules and Guidelines</span><hr>
+                              <ul style="list-style-type:disc;line-height: 25px;">
+                                <li>Article must be prepared in editable Micro Soft Word (saved in 1997-2003 document) format and should be sent to editor-in-chief@agrivision4u.com as an email attachment or through online submission for reviewing and suggested modification.</li><br>
+                                <li>Article should not be more that 2000 words.</li><br>
+                                <li>Article must be informative, innovative and trending.</li><br>
+                                <li>Tables, figures and good quality photographs are always desirable.</li><br>
+                                <li>Title should be short and informative of the content with 14 font size of bold Times New Roman</li><br>
+                                <li>Complete addresses of all authors should be given below the title with 12 font size of times new roman and email of corresponding author must be given after the addressees with 11 font size of bold times new roman.</li> <br>
+                                <li>Lines, figures, Illustrations and other resources to be reproduced from other publications must be properly credited / cited.</li> <br>
+                                <li>Units in metric system; full forms of all abbreviations used in table; source of data should be given in detail.</li> <br>
+                                <li>Units of measurement, symbols and standard abbreviations should conform to those recommended by the International Union of Biochemistry (IUB) and the International Union of Pure and Applied Chemistry (IUPAC).</li> <br>
+                                <li>Metric measurements are preferred, and dosages should be expressed entirely in metric units (SI units). In exceptional circumstances, others may be used, provided they are consistent.</li> <br>
+                                <li>Well - presented articles will be given priority.</li> <br>
+                              </ul>
+                            </div>
+                        </div>
+                        <ul class="nav nav-pills my-3" style="justify-content: center;">
+                        <li class="nav-item" >
+                            <button class="nav-link active  text-dark m-2" type="button" onclick="openform()">Return to Form</button>
+                        </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-inst" role="tabpanel" aria-labelledby="pills-inst-tab">
+                        <div class="container">
+                            <div class="m-auto col-lg-7 bg-secondary text-dark card px-5">
+                             <span class="pt-3" style="font-size: 20px;" >Instructions</span><hr>
+                              <ul style="list-style-type:disc; line-height: 25px;">
+                                <li>Title of Article .... Font size 14</li><br>
+                                <li>Author(s) Name: ...... Font size 12</li><br>
+                                <li>Author(s) Institution/University/State department Font size 11</li><br>
+                                <li>Tables, figures and good quality photographs are always desirable.</li><br>
+                                <li>Corresponding author email ID ...... Font size 11</li><br>
+                                <li>1. Introduction</li> <br>
+                                <li>Lines, figures, Illustrations and other resources to be reproduced from other publications must be properly credited / cited.</li> <br>
+                                <li>2. Heading</li> <br>
+                                <li>2.1 Sub-heading</li> <br>
+                                <li>2.2 ………</li> <br>
+                                <li>2.3 ………</li> <br>
+                                <li>Conclusion</li> <br>
+                                <li>Table(s), and Figure(s)</li> <br>
+                                <li>References [(if required) can be added in articles].</li> <br>
+                              </ul><hr>
+                              <span class="py-3" style="font-size: 25px;" >How to cite reference:</span>
+                              <p class="pt-3" style="line-height: 24px;"> Text citation by name followed by year of publication: Singh (2004); Tomar et al. (2004); (Joshi 1984; Jain and Reddy 1995; Saxena et al. 2012) Listing of references should be in alphabetical order.<br>
+                               Hemantaranjan, A., Bhanu, A. N., Singh, M. N., Yadav, D. K., Patel, P. K., Singh, R., & Katiyar, D. (2014). Heat stress responses and thermotolerance. Adv. Plants Agric. Res, 1(3), 1-10. <br>
+                                  Bhanu, A. N., Bhandari, H. R., Singh, M. N., & Srivastava, K. (2017). Introduction to phenomics and its application in physiological breeding. Advances in Plant Physiology (Vol. 17), 200.
+                                  Hemantaranjan, A. (Ed.). (1998). Advances in plant physiology. Scientific Publ..</p><br>
+
+                            </div>
+                        </div>
+                        <ul class="nav nav-pills my-3" style="justify-content: center;">
+                        <li class="nav-item" >
+                            <button class="nav-link active  text-dark m-2" type="button" onclick="openform()">Return to Form</button>
+                        </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-charge" role="tabpanel" aria-labelledby="pills-charge-tab">
+                        <div class="container">
+                            <div class="m-auto col-lg-7 bg-secondary text-dark card px-5">
+                              <span class="pt-3" style="font-size: 20px;" >Payment Guide In brief</span><hr>
+                              <span class="py-3" style="font-size: 25px;" >1. For single Article</span>
+                              <ul style="list-style-type:disc;">
+                                <li>100 INR – M.Sc. / M.Tech / M.Phill. / Project JRF</li><br>
+                                <li>125 INR – Ph.D. Scholars/ Project SRF / Research Associates / Teaching Associates</li><br>
+                                <li>150 INR - Scientists / Asst Prof.  / Professors / SMS / AO and other officers</li><br>
+                              </ul>
+                              <p class="py-3">In case articles with more than two authors and then a payment of extra 50 INR per extra co-author is needed for that article.</p>
+                              <span class="pt-3" style="font-size: 25px;" >2. Annual Membership charge (4 free articles)</span><hr>
+                              <p class="py-3" style="line-height: 20px;"> "An annual member can publish 4 articles in this e-magazine free of cost (Articles must satisfy the minimum quality requirement, plagiarism policy and must have all coauthor’s payment done)."</p><br>
+                              <ul style="list-style-type:disc;">
+                                <li>"250 INR – M.Sc / M.Tech / M.Phill. / Project JRF."</li><br>
+                                <li>"450 INR – Ph.D. Scholars/ Project SRF / Research Associates / Teaching Associates."</li><br>
+                                <li>"500 INR - Scientists / Asst Prof.  / Professors / SMS / AO and other officers."</li><br>
+                                <p>"Receipt, transaction details & membership form is mandatory to be sent to after payment (in 1-2 days)."</p><br>
+                                <p>"Members would get annual membership certificate"</p><br>
+                              </ul>
+                            </div>
+                        </div> 
+                        <ul class="nav nav-pills my-3" style="justify-content: center;">
+                        <li class="nav-item" >
+                            <button class="nav-link active  text-dark m-2" type="button" onclick="openform()">Return to Form</button>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+  </div>

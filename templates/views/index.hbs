@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Magzine</title>
+    <link rel="icon" href="dp/quizic.png" type="image/icon type">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+<div class="header">
+    {{>topheader}}
+    <div class="midhead">
+        <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><span class="d-flex flex-column"><i class="fas fa-home"></i>Home</span></button>
+            <button class="nav-link" id="nav-magzine-tab" data-bs-toggle="tab" data-bs-target="#nav-magzine" type="button" role="tab" aria-controls="nav-magzine" aria-selected="false"><span class="d-flex flex-column"><i class="fas fa-newspaper"></i>Magzine</span></button>
+            <button class="nav-link" id="nav-magsubmit-tab" data-bs-toggle="tab" data-bs-target="#nav-mag-submit" type="button" role="tab" aria-controls="nav-mag-submit" aria-selected="false"><span class="d-flex flex-column"><i class="fas fa-user-edit"></i>Submission</span></button>
+        </div>
+        </nav>
+    </div>
+    <div class="bottomhead bg-dark">
+        <p>next artical will be released in 00:00</p>
+    </div>
+    </div>
+{{!-- header ends --}}
+<div class="tab-content" id="nav-tabContent">
+    {{>home}}
+    {{>magzine}}
+    {{>submission}}
+</div>
+
+{{>footer}}
+
+</body>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
+<script  src="js/script.js"></script>
+<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>
